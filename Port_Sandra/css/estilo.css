@@ -1,10 +1,105 @@
-.cor{color:red}
-*{font-family: Arial; margin: 0}
-.cabecalho{color: #ffffff; background-color: #53801E; padding: 5px;}
-.sec{padding: 5px}
-.rodape{padding: 15px; color: #ffffff; background-color: #53801E; text-align: center}
-.cor1{color:hotpink;font-size:40px;}
-nav{background-color:#d6e1ff;}
-td{border:3px solid gray;}
-.alinha{width:80%;margin:0 auto;}
-tr,th{background-color: #e0e0e0;border:3px solid gray;}
+body, html{
+    margin: 0;
+    height: 100%; /* Parallax */
+    scroll-behavior: smooth;
+}
+
+/* Efeito parallax */
+
+.caixa1, .caixa2, .caixa3, .caixa4{
+    position: relative;
+    height: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.caixa1{
+    background-image: url(../img/abstract-binary-code-background.png);
+}
+
+.conteudo-titulo{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo-titulo span.titulo{
+    background-color: rgba(52, 58, 64, 0.3);
+    color: #ffffff;
+    padding: 18px;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+/* Hover no card */ 
+
+.card-link{
+    text-decoration: none;
+}
+
+.card-content{
+    height: 100%;
+    width: 18rem;
+}
+
+.card-content:hover{
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* IE8 */
+}
+
+.ul-margin {
+    margin-top: -1px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #17a0b5;
+    background-color: #5c6670;
+    border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active:hover {
+    cursor: not-allowed;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: #17a2b8;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0f6674;
+}
+
+/* Alterando espaçamentos da box conteúdo no responsivo */
+@media screen and (max-width: 550px) {
+    .conteudo-titulo span.titulo {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+/* Arrumando o tamanho da fonte do display em dispositivos móveis*/
+
+@media screen and (max-width: 575.98px) {
+    .display-4 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        line-height: 1.0;
+    }
+}
+
+/* Definindo margin para os elementos col no responsivo */
+
+@media screen and (max-width: 991px) {
+    .col-responsivo{
+        margin-top: 15px;
+    }
+}
